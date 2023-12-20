@@ -1,0 +1,175 @@
+body {
+  font-family: 'Courier New', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.highlight {
+  color: #FFD700; /* Warna emas */
+}
+
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.zoom {
+  transform: scale(1.2);
+}
+
+.special-text {
+  color: blue; /* Ubah warna teks menjadi biru */
+  text-decoration: underline; /* Berikan efek garis bawah pada teks */
+}
+
+.special-text {
+  color: blue; /* Mengubah warna teks menjadi biru */
+  animation: zoomSpecial 1s infinite alternate; /* Animasi gerakan ngezoom pada teks */
+}
+
+@keyframes zoomSpecial {
+  from {
+    transform: scale(1); /* Ukuran normal teks */
+  }
+  to {
+    transform: scale(1.2); /* Ukuran teks yang diperbesar */
+  }
+}
+
+@keyframes flyBalloons {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.balloon-images {
+  position: relative;
+  animation: flyBalloons 5s ease forwards;
+}
+
+.person-image {
+  display: none;
+}
+
+/* Setelah balon bergerak ke atas, tunjukkan gambar orang dan teks */
+@keyframes showPersonAndText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.person-image.show {
+  display: block;
+  animation: showPersonAndText 1s forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+#slide1{
+  /* ... (Properti CSS lainnya) ... */
+  background-image: url('hppy.webp'); /* Ganti dengan path background-image yang diinginkan */
+  background-size: 100% 100%;
+}
+
+#slide9 {
+  position: relative; /* Tetapkan posisi relatif untuk slide */
+  /* Properti CSS lainnya */
+}
+
+.balloon-container {
+  position: absolute;
+  top: 20px; /* Atur jarak dari atas */
+  left: 50%; /* Pusatkan horizontal */
+  transform: translateX(-50%); /* Pusatkan horizontal */
+  z-index: 1; /* Pastikan balon berada di atas latar belakang */
+}
+
+.firework {
+  position: absolute;
+  top: -30px; /* Atur jarak dari atas */
+  left: 50%; /* Pusatkan horizontal */
+  transform: translateX(-50%); /* Pusatkan horizontal */
+  z-index: 2; /* Pastikan petasan berada di atas latar belakang */
+}
+
+
+@keyframes fireworks {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-800px) rotate(720deg);
+  }
+}
+
+#slide9 {
+  /* Properti lainnya */
+  background-image: url('latar.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Menyebabkan elemen ini memiliki tinggi setidaknya sama dengan tinggi viewport */
+}
+
+/* Gaya khusus jika diperlukan */
+.smile {
+  display: inline-block;
+  transform-origin: center;
+  animation: smile-animation 1.5s infinite alternate;
+}
+
+@keyframes smile-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+/* Tambahkan gaya untuk posisi Next button di pojok kanan */
+#nextButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: none; /* Hilangkan transisi agar tombol tetap diam */
+}
+
+
+/* Tambahkan animasi untuk floatdown di sini */
+.floatdown {
+  animation-name: floatdown;
+  animation-duration: 1s;
+}
+
+@keyframes floatdown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

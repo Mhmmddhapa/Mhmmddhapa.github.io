@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Show</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Tambahkan gaya khusus di sini jika diperlukan */
+    .smile {
+      display: inline-block;
+      transform-origin: center;
+      animation: smile-animation 1.5s infinite alternate;
+    }
+
+    @keyframes smile-animation {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="slide" id="slide1">
+  <h1>Hi, Mutifa</h1>
+  <p class="animate__animated animate__fadeInUp">I really like your name btw</p>
+</div>
+
+<div class="slide" id="slide2">
+  <h1>It's Your Birthday!!</h1>
+</div>
+
+<div class="slide" id="slide3">
+  <h1>Happy Birthday! Better late than never, right? Happy belated birthday, and may all your dreams come true</h1>
+  <button onclick="sendWishes()">Send</button>
+</div>
+
+<div class="slide" id="slide4">
+  <h1>That's what I was going to do.</h1>
+</div>
+
+<div class="slide" id="slide5">
+  <h1>But then I stopped.</h1>
+</div>
+
+<div class="slide" id="slide6">
+  <h1>I realized, I wanted to do something</h1>
+  <h1 class="special-text">Special</h1>
+</div>
+
+<div class="slide animate__animated animate__bounceIn" id="slide7">
+  <h1><span class="highlight">Because,</span> you are <span class="special-text">special.</span></h1>
+  <h1 class="smile">:)</h1>
+</div>
+
+<div class="slide" id="slide8">
+  <h1>SO</h1>
+</div>
+
+<div class="slide" id="slide9">
+  <div class="balloon-container">
+    <img src="balon_4-removebg-preview.png" alt="Balloons" class="animate__animated animate__zoomIn" style="max-width: 50%;">
+    <div class="firework"></div> <!-- Efek petasan di atas balon -->
+  </div>
+  <div class="text-container">
+    <img src="mut.jpg" alt="tifa" style="max-width: 50%; margin-top: 100px;">
+    <h1>Happy Birthday!</h1>
+    <h1>may allah bless you with happiness and good health!</h1>
+  </div>
+</div>
+
+
+
+<div class="slide" id="slide10">
+  <p>Okay, now come back and tell me if you liked it.</p>
+  <p id="replay">Or click, if you want to watch it again.</p>
+  <p class="last-smile">:)</p>
+</div>
+
+
+<audio id="backgroundMusic" loop>
+  <source src="Y2meta.app - Ali Gatie - It's You (Official Lyrics Video).mp3" type="audio/mpeg">
+  Maaf, browser Anda tidak mendukung elemen audio.
+</audio>
+
+<!-- Tombol untuk memulai audio -->
+<button id="playButton">Play Audio</button>
+
+<button id="nextButton">Next</button>
+
+<script src="script.js"></script>
+</body>
+</html>
